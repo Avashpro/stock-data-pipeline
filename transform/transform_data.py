@@ -7,7 +7,6 @@ PROCESSED_PATH = "/Users/apple/Documents/crypto-data-pipeline/data/processed/pro
 def transform_data():
     df = pd.read_parquet(RAW_PATH)
 
-    # Rename columns for warehouse standard
     df = df.rename(columns={
         "open": "open_price",
         "high": "high_price",
@@ -15,11 +14,9 @@ def transform_data():
         "close": "close_price"
     })
 
-    # Ensure correct dtypes
     df["date"] = pd.to_datetime(df["date"])
     df["volume"] = df["volume"].astype("int64")
 
-    # Sort time series
     df = df.sort_values("date")
 
     return df

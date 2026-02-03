@@ -8,7 +8,6 @@ def load_to_mysql():
     engine = create_engine(DB_URL)
     df = pd.read_parquet(PARQUET_PATH)
 
-    # Rename to match MySQL schema
     df = df.rename(columns={"name": "symbol"})
 
     df.to_sql(

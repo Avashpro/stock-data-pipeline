@@ -17,7 +17,6 @@ def fetch_stock_data():
 
     data = response.json()
 
-    # Check for errors or rate limits
     if "Time Series (Daily)" not in data:
         print("API did not return daily data. Full response:")
         print(data)
@@ -39,7 +38,6 @@ def fetch_stock_data():
 
     df = pd.DataFrame(all_data)
 
-    # Convert types for Parquet safety
     df["date"] = pd.to_datetime(df["date"])
     numeric_cols = ["open", "high", "low", "close", "volume"]
     df[numeric_cols] = df[numeric_cols].apply(pd.to_numeric, errors='coerce')

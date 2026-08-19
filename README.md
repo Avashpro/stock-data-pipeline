@@ -1,10 +1,10 @@
-# 📈 Stock Data Pipeline
+# Stock Data Pipeline
 
 This is a **Python project** that builds a **stock market data ETL (Extract, Transform, Load) pipeline** — meaning it automatically fetches stock prices, cleans and reshapes them, analyzes trends, and saves the results for further use (like dashboards or databases).
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 The pipeline is organized in a **modular structure** so each part of the data flow has its own place:
 
@@ -17,18 +17,18 @@ This makes it easy to extend into a full data pipeline with schedulers, real-tim
 
 ---
 
-## 📁 Features
+## Features
 
-- 🟢 **Data Ingestion:** Fetch stock market data from public APIs  
-- 🧹 **Data Transformation:** Clean and reshape raw stock data for analysis  
-- 📊 **Analytics:** Compute trends and indicators from processed stock data  
-- 💾 **Load:** Save outputs to CSV, database, or other storage
+-  **Data Ingestion:** Fetch stock market data from public APIs  
+-  **Data Transformation:** Clean and reshape raw stock data for analysis  
+-  **Analytics:** Compute trends and indicators from processed stock data  
+-  **Load:** Save outputs to CSV, database, or other storage
 
 You can expand this pipeline further with tools like Apache Airflow, Kafka, or visualization dashboards. :contentReference[oaicite:0]{index=0}
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 This project is built with:
 
@@ -38,7 +38,7 @@ This project is built with:
 
 ---
 
-## 🧠 How It Works
+##  How It Works
 
 1. **Ingestion**  
    Fetch stock data from one or more APIs and store it locally.
@@ -56,7 +56,7 @@ Because it’s modular, you could also add scheduling, real-time streaming, or d
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 To run this project:
 
